@@ -43,7 +43,7 @@ class BDatos
   } 
 
 
-  function insertarAlum($alumno)
+  function insertarEmpleado($alumno)
   {   
      $this->sql = "insert into alumnos values('".$alumno->getCod()."',
                                              '".$alumno->getNom()."',
@@ -116,7 +116,7 @@ class BDatos
      }
 
 
-  function llenaAlumno($consulta, $alumno)
+  function llenaEmpleado($consulta, $alumno)
   { 
    
       $reg = mysqli_fetch_array($consulta);
@@ -129,7 +129,7 @@ class BDatos
   }
 
 
-  function modificaAlum($tabla, $alumno)
+  function modificaEmpleado($tabla, $alumno)
   {
 
 
@@ -154,7 +154,7 @@ class BDatos
 
   }
 
-  function borrarReg($tabla, $abuscar)
+  function borrarEmpleado($tabla, $abuscar)
   {
     $this->sql="DELETE FROM $tabla WHERE nombre='$abuscar'";
     $res = mysqli_query($this->dbd, $this->sql);
@@ -172,24 +172,34 @@ class BDatos
 }
 
 
+// *****************  EMPLEADO  *******************
 
+class Empleado{
 
+  var $numero_empleado;
+  var $nombre_empleado;
+  var $apellidop_empleado;
+  var $apellidom_empleado;
+  var $edad;
+  var $genero;
+  var $puesto;
+  var $sueldo;
+  var $usuario;
+  var $contrasenia;
 
-
-
-// *****************  ALUMNO  *******************
-
-class Alumno{
-
-  var $codigo;
-  var $nombre;
-  var $sexo;
-
-  function Alumno()
+  function empleado()
   {
-     $this->codigo = null;
-     $this->nombre = "";
-     $this->sexo = "";
+     $this->numero_empleado = null;
+     $this->nombre_empleado = "";
+     $this->apellidop_empleado = "";
+     $this->apellidom_empleado = "";
+     $this->edad = "";
+     $this->genero = "";
+     $this->puesto = "";
+     $this->sueldo = "";
+     $this->usuario = "";
+     $this->contrasenia = "";
+
   }
 
   function setCod($codigo)
