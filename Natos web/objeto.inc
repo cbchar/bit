@@ -202,34 +202,108 @@ class Empleado{
 
   }
 
-  function setCod($codigo)
+
+/*Funciones SET*/
+  function setNumero_empleado($numero_empleado)
   {
      $this->codigo = $codigo;  
   }
 
-  function setNom($nombre)
+  function setNombre_empleado($nombre_empleado)
   {
-     $this->nombre = $nombre;
+     $this->nombre_empleado = $nombre_empleado;
   }
 
-  function setSex($sexo)
+  function setApellidop_empleado($apellidop_empleado)
   {
-     $this->sexo = $sexo;
+     $this->apellidop_empleado= $apellido;
   }
 
-  function getCod()
+  function setApellidom_empleado($apellidom_empleado)
   {
-     return $this->codigo;
+     $this->apellidom_empleado = $apellidom_empleado;
   }
 
-  function getNom()
+  function setEdad_empleado($edad)
   {
-     return $this->nombre;
+     $this->edad = $edad;
   }
 
-  function getSex()
+  function setGenero_empleado($genero)
   {
-     return $this->sexo;
+     $this->genero = $genero;
+  }
+
+  function setPuesto_empleado($puesto)
+  {
+     $this->puesto = $puesto;
+  }
+
+  function setSueldo_empleado($sueldo)
+  {
+     $this->sueldo = $sueldo;
+  }
+
+  function setUsuario($usuario)
+  {
+     $this->usuario = $usuario;
+  }
+
+  function setContra($contrasenia)
+  {
+     $this->contrasenia = $contrasenia;
+  }
+
+
+/*Funciones GET*/
+  function getNumero_empleado()
+  {
+     return $this->numero_empleado;
+  }
+
+  function getNombre_empleado()
+  {
+     return $this->nombre_empleado;
+  }
+
+  function getApellidop_empleado()
+  {
+     return $this->apellidop_empleado;
+  }
+
+function getApellidom_empleado()
+  {
+     return $this->apellidom_empleado;
+  }
+
+  function getEdad_empleado()
+  {
+     return $this->edad;
+  }
+
+  function getGenero_empleado()
+  {
+     return $this->genero;
+  }
+
+function getPuesto_empleado()
+  {
+     return $this->puesto;
+  }
+
+function getSueldo_empleado()
+  {
+     return $this->setSueldo_empleado;
+  }
+
+  function getUsuario()
+  {
+     return $this->usuario;
+  }
+
+  function getContra()
+  {
+     return $this->contrasenia;
   }
 
 }
